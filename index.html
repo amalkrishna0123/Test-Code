@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  </head>
+  <style>
+    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.home-banner {
+  background: linear-gradient(to right , rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%), url('/MajoeFiles/images/bg image.jpg');
+  background-position: center;
+  opacity: 0.9;
+  overflow: hidden;
+}
+.home-banner::before{
+    /* content: "";
+    position: absolute;
+    top: 0;
+    left: 0; */
+    width: 50%; /* Adjust the width to control the gradient coverage */
+    /* height: 100%; */
+    /* background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);  */
+    /* overflow: hidden; */
+}
+nav{
+    width: 100%;
+    height:100px;
+    display: flex;
+    color: white;
+}
+nav ul{
+    display: flex;
+    color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: fixed;
+    right: 0;
+    margin:20px;
+    padding-right: 20px;
+    gap: 50px;
+    color: white;
+}
+.left-side{
+    padding-left: 50px;
+    align-items: center;
+    color: white;
+}
+.left-side .logo-text{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    text-transform: capitalize;
+    position: relative;
+}
+.left-side .logo-text .logo{
+    width: 200px;
+    height: auto;
+}
+.left-side .logo-text .logotext{
+  position: absolute;
+  left: 140px;
+}
+.left-side .HomeDate{
+    padding-left: 50px;
+}
+.left-side .HomeDate h1{
+    font-size: 26px;
+    font-weight: 600;
+}
+.left-side .HomeDate h1 span{
+    display: block;
+    
+}
+.left-side .discovering{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.left-side .discovering h4{
+    font-size: 18px;
+    width: 400px;
+}
+.left-side .discovering h4 .firstspan{
+    font-size: 32px;
+    display: block;
+}
+.left-side .homeButton{
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.left-side .homeButton button{
+    padding: 10px;
+    font-weight: 600;
+    opacity: 0.9;
+    background-color: darkgreen;
+    border: none;
+    outline: none;
+}
+.right-side{
+    position: absolute;
+    right:0;
+    bottom: 400px;
+}
+.animated-number {
+      font-size: 2em;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+.right-side ul{
+    list-style: none;
+    color: white;
+}
+.right-side .home-divTime{
+    background-color: darkgreen;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+.right-side .home-divTime h1{
+    font-size: 23px;
+}
+.right-side .home-divTime p{
+    font-size: 9px;
+}
+.second-section{
+  background-color: rgba(255, 255, 0, 0.532);
+}
+.Overview{
+  display: flex;
+  justify-content: space-between;
+}
+.Overview .right-overview{
+  width: 50%;
+  margin-top: 5%;
+
+}
+.Overview .right-overview h1{
+  text-align:left;
+  padding-bottom: 15px;
+  font-weight: 700;
+}
+.Overview .right-overview p{
+  padding-bottom: 20px;
+  font-size: 12px;
+}
+
+.thirdSection{
+  background: url(/MajoeFiles/images/london-city-cityscape-city-lights-dusk-purple-sky-horizon-3840x2400-4316.jpg);
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  position: relative;
+}
+.thirdSection .filterTime{
+  width: 85%;
+  height: 200px;
+  background-color: rgba(249, 255, 255, 0.427);
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-radius: 10px;
+  align-items: center;
+}
+.flextime{
+  display: flex;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.flextime ul{
+  list-style: none;
+  color: darkgreen;
+  display: flex;
+  gap: 170px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flextime ul li{
+  font-size: 32px;
+}
+.flextime ul li p{
+  font-size: 12px;
+  font-weight: 800;
+}
+.swiper-container {
+  width: 100%;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  position: absolute;
+  bottom: 50px;
+  overflow: hidden;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 350px;
+  height: 250px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.fourthSection{
+  background-color: black;
+}
+.fourthSection .featuredSection h1{
+  text-align: center;
+  padding-top: 10px;
+  color: white;
+  font-size: 32px;
+}
+.fourthSection .featuredSection .featured-para{
+  text-align: center;
+  color: darkgreen;
+  font-size: smaller;
+}
+.CardSliderIcon{
+  display: flex;
+}
+.Icon-Div {
+ height: 170px;
+ width: 170px;
+ border-radius: 10px;
+ margin: 50px;
+ background-color: darkgreen;
+ padding: 20px;
+ align-items: center;
+ justify-content: center;
+}
+
+.Card-Icon{
+ font-size: 32px;
+}
+.fifth-section{
+  background-color: black;
+  color: white;
+}
+.fifthsectiondiv{
+  padding-left: 50px;
+}
+.fifthsectiondiv h1{
+  font-size: 32px;
+}
+.meetpara{
+  color: darkgreen;
+}
+.card-container {
+  display: flex;
+}
+
+
+.card {
+ height: 170px;
+ width: 170px;
+ border-radius: 10px;
+ margin: 50px;
+ background-color: darkgreen;
+ padding: 20px;
+ align-items: center;
+ justify-content: center;
+}
+.card h2{
+  font-size: 12px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.card .roundper{
+  border-radius: 50%;
+  color: aqua;
+  border: 3px solid black;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.card .roundper span{
+  position: absolute;
+  top: 50px;
+  right: 45px;
+}
+.CardSlider{
+  display: flex;
+}
+.cards{
+  height: 170px;
+ width: 170px;
+ border-radius: 0px;
+ margin: 15px;
+ background-color: rgb(0, 69, 3);
+ padding: 20px;
+ align-items: center;
+ justify-content: center;
+}
+
+
+  </style>
+  <body>
+    
+    <section class="home-banner" style="height: 600px;">
+      <nav>
+        <ul>
+          <li>HOME</li>
+          <li>THEMES</li>
+          <li>WHY PARTNER</li>
+          <li>VISIT SAUDI</li>
+        </ul>
+      </nav>
+      <div class=" left-side" style="z-index: 1; padding-top: 10%;">
+        <!-- logo&text -->
+        <div class="logo-text">
+          <!-- logo -->
+          <div class=" logo">
+            <i class="fa-solid fa-business-time" style="font-size: 62px; padding-left: 50px;"></i>
+          </div>
+          <!-- text -->
+          <div class="logotext">
+            <h2 style="width: 100px; font-size: 20px;line-height: 16px;">Lorem ipsum dolor sit</h2>
+          </div>
+        </div>
+          <!-- date -->
+          <div class="HomeDate" style="padding-top: 20px;">
+            <h1>10-11 JUNE</h1>
+            <span>RIYADH, SAUDI ARABIA</span>
+          </div>
+        <!-- discovering -->
+        <div class="discovering">
+          <h4>DISCOVERING THE FUTURE <span class="firstspan" style="color: green;">INFRASTRUCTURE OF</span> <span>SAUDI ARABIA WITH VISION 2030</span></h4>
+        </div>
+       <div class="homeButton ">
+        <button>REGISTER NOW!</button>
+        <button>SPONSOR NOW!</button>
+       </div>
+      </div>
+      <!-- right side -->
+      <div class="right-side">
+        <ul>
+          <li><div class="home-divTime">
+            <h1 class="num" data-val="146">0</h1>
+            <p>DAYS</p>
+          </div></li>
+          <li><div class="home-divTime">
+            <h1 class="num" data-val="16">0</h1>
+            <p>HOURS</p>
+          </div></li>
+          <li><div class="home-divTime">
+            <h1 class="num" data-val="54">0</h1>
+            <p>MINUTES</p>
+          </div></li>
+          <li><div class="home-divTime">
+            <h1 class="num" data-val="40">0</h1>
+            <p>SECONDS</p>
+          </div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="second-section">
+      <div class="Overview">
+        <div class="left-overview" style="position: relative;">
+          <img src="/MajoeFiles/images/bg2.jpg" style="mix-blend-mode: darken;" alt="">
+          <img src="/MajoeFiles/images/8918182.png" style="width: 200px; height: auto; position: absolute; right: 100px;mix-blend-mode: screen; top: 400px;" alt="">
+          <img src="/MajoeFiles/images/8918182.png" style="width: 200px; height: auto; position: absolute; left: 100px; top: 50px;mix-blend-mode: screen;" alt="">
+          <img src="/MajoeFiles/images/8918182.png" style="width: 200px; height: auto; position: absolute; right: 100px; top: 50px;mix-blend-mode: screen;" alt="">
+
+        </div>
+        <div class="right-overview" style="z-index: 5; padding-left: 10px;">
+          <h1>EVENT OVERVIEW</h1>
+          <p style="padding-right: 30px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, rem sint in, sed earum, beatae totam provident eveniet accusantium deserunt veniam perspiciatis ratione? Vero asperiores eius nesciunt nihil nostrum commodi.
+          Sit, perspiciatis necessitatibus officiis quod, incidunt reprehenderit quas laudantium nulla asperiores ratione fuga saepe corporis! Autem blanditiis iure ab nostrum veritatis? Et, at ipsam a laudantium itaque nemo accusamus blanditiis?
+          Quas obcaecati adipisci quibusdam et debitis laudantium, nisi voluptatem totam quis minus officia odio maiores aperiam nobis hic placeat non possimus enim corrupti provident quaerat accusantium! Nulla amet eligendi odio.
+          saepe corporis! Autem blanditiis iure ab nostrum veritatis? Et, at ipsam a laudantium itaque nemo accusamus blanditiis?
+          Quas obcaecati adipisci quibusdam et debitis laudantium, nisi voluptatem totam quis minus officia odio maiores aperiam nobis hic placeat non possimus enim corrupti provident quaerat accusantium! Nulla amet eligendi odio.
+          <span style="display: block; padding-top: 20px;">
+            Velit deleniti sunt nulla enim neque minus ipsa sapiente officiis eos quas et laudantium dolorum ipsum explicabo numquam fugit nesciunt repudiandae, non dolore ad inventore. Soluta doloremque unde vero veritatis?
+          Asperiores quia aut ducimus quod cum quaerat ipsam sapiente, distinctio deserunt velit ipsum reiciendis accusantium rerum eos, laudantium ab alias? Ducimus, nam! Quasi similique ipsa atque natus facere et repellendus.
+          </span>
+          <span style="display: block;padding-top: 20px;">
+            Alias aspernatur libero molestiae odit minus voluptatibus molestias. Vero quod consequatur enim deleniti accusamus non, quasi quaerat itaque sint quibusdam vitae, officiis sequi dolore quam minima ex dolor cumque neque!
+          Reiciendis debitis consequatur rem! Omnis, dicta incidunt. Placeat inventore quibusdam, molestias iure quam distinctio assumenda facilis praesentium iusto ut ipsum, mollitia, illum cumque cupiditate sint saepe maxime eum at eligendi?
+          </span>
+           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="thirdSection">
+      <div class="filterTime">
+        <!-- timer div -->
+        <div class="flextime">
+          <ul>
+            <li><div>
+              <h1 class="num" data-val="1000">0 </h1>
+              <p>ATTENDS</p>
+            </div></li>
+            <li><div>
+              <h1 class="num" data-val="30">0 <span>+</span></h1>
+              <p>SECONDS</p>
+            </div></li>
+            <li><div>
+              <h1 class="num" data-val="75">0 <span>+</span></h1>
+              <p>SPEAKERS</p>
+            </div></li>
+            <li><div>
+              <h1 class="num" data-val="50">0 <span>+</span></h1>
+              <p>EXIBITORS & SPONSORS</p>
+            </div></li>
+          </ul>
+        </div>
+
+        <!-- hoverslider -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(/MajoeFiles/images/jocke-wulcan-KLOW1bD616Y-unsplash.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(/MajoeFiles/images/keegan-houser--Q_t4SCN8c4-unsplash.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(/MajoeFiles/images/zac-durant-_6HzPU9Hyfg-unsplash.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(/MajoeFiles/images/zachary-kadolph-1utQVafuNaU-unsplash.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(/MajoeFiles/images/bg\ image.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(/MajoeFiles/images/bg\ image.jpg)"></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section style="background-color: black;">
+      <div style="align-items: center; justify-content: center; text-align: center; padding-top: 20px;">
+        <h1 style="color: white; font-size: 35px;
+        font-weight: 700;">FEATURED</h1>
+        <p style="font-size: 15px; color: darkgreen;">TOPIC DISCUSSIONS</p>
+      </div>
+      <div class="CardSlider" style="justify-content: center; align-items: center;">
+        <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
+          <i class="fa-regular fa-calendar-days" style="font-size: 40px;color: white;"></i>
+          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+        </div>
+        <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
+          <i class="fa-regular fa-calendar-days"  style="font-size: 40px;color: white;"></i>
+          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+        </div>
+        <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
+          <i class="fa-regular fa-calendar-days"  style="font-size: 40px;color: white;"></i>
+          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+        </div>
+        <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
+          <i class="fa-regular fa-calendar-days"  style="font-size: 40px;color: white;"></i>
+          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+        </div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <script>
+const animatedElements = [];
+
+function startCountdownIfVisible(valueDisplay) {
+  const rect = valueDisplay.getBoundingClientRect();
+  const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+  if (rect.top <= windowHeight && rect.bottom >= 0 && !animatedElements.includes(valueDisplay)) {
+    let startValue = 0;
+    let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+    let duration = Math.floor(1000 / endValue);
+    let counter = setInterval(function () {
+      startValue += 1;
+      valueDisplay.textContent = startValue;
+      if (startValue == endValue) {
+        clearInterval(counter);
+        animatedElements.push(valueDisplay);
+      }
+    }, duration);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  let valueDisplays = document.querySelectorAll(".num");
+
+  // Trigger countdown for visible elements on page load
+  valueDisplays.forEach(startCountdownIfVisible);
+
+  // Trigger countdown for visible elements on scroll
+  window.addEventListener("scroll", function () {
+    valueDisplays.forEach(startCountdownIfVisible);
+  });
+});
+
+
+     var swiper = new Swiper('.swiper-container', {
+  pagination: '.swiper-pagination',
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  coverflow: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows : true
+  },
+  loop: true
+});
+    </script>
+  </body>
+</html>
