@@ -28,6 +28,13 @@
 html{
     scroll-behavior: smooth;
 }
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
 .home-banner {
   background: linear-gradient(to right , rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 100%), url('https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329162/bg_image_i1banm.jpg');
   background-position: center;
@@ -63,6 +70,9 @@ nav ul{
     gap: 55px;
     color: white;
     font-size: 22px;
+}
+nav ul li{
+  cursor: pointer;
 }
 .left-side{
     padding-left: 50px;
@@ -210,10 +220,10 @@ nav ul{
   text-align: center;
 }
 .flextime ul li{
-  font-size: 32px;
+  font-size: 62px;
 }
 .flextime ul li p{
-  font-size: 12px;
+  font-size: 22px;
   font-weight: 800;
 }
 .swiper-container {
@@ -471,18 +481,21 @@ nav ul{
   object-fit: cover;
   object-position: center;
 }
+.Icons_List ul li h6{
+  font-size: 11px;
+}
 
 
   </style>
   <body>
     
-    <section class="home-banner" style="height: 600px;">
+    <section id="home" class="home-banner" style="height: 600px;">
       <nav>
         <ul>
-          <li>HOME</li>
-          <li>THEMES</li>
-          <li>WHY PARTNER</li>
-          <li>VISIT SAUDI</li>
+          <li><a id="home-link" href="#">HOME</a></li>
+          <li><a id="themes-link" href="#">THEMES</a></li>
+          <li><a id="partner-link" href="#">WHY PARTNER?</a></li>
+          <li><a id="visit-link" href="#">VISIT SAUDI</a></li>
         </ul>
       </nav>
       <div class=" left-side" style="z-index: 1; padding-top: 40px;">
@@ -535,7 +548,7 @@ nav ul{
       </div>
     </section>
 
-    <section class="second-section">
+    <section id="themes" class="second-section">
       <div class="Overview">
         <div class="left-overview" style="position: relative;">
           <img src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329540/ae-research-hero-the-ksa-real-estate-market-mid-year-review-2019-masked_m0ka6i.jpg" style="mix-blend-mode: darken;" alt="">
@@ -564,9 +577,10 @@ nav ul{
       </div>
     </section>
 
-    <section class="thirdSection">
+    <section id="thirdSection" class="thirdSection">
       <div class="filterTime">
         <!-- timer div -->
+       <div style="display: flex;justify-content: center;align-items: center;">
         <div class="flextime">
           <ul>
             <li><div>
@@ -587,6 +601,7 @@ nav ul{
             </div></li>
           </ul>
         </div>
+       </div>
 
         <!-- hoverslider -->
         <div class="swiper-container">
@@ -604,7 +619,7 @@ nav ul{
     </section>
 
     
-    <section style="background-color: black;">
+    <section id="visit" style="background-color: black;">
       <div style="align-items: center; justify-content: center; text-align: center; padding-top: 20px;line-height: 40px;">
         <h1 style="color: white; font-size: 75px;
         font-weight: 700;">FEATURED</h1>
@@ -647,7 +662,7 @@ nav ul{
       </div> -->
     </section>
 
-    <section class="Fourth-Section" style="display: flex;align-items: center; justify-content: center;">
+    <section  class="Fourth-Section" style="display: flex;align-items: center; justify-content: center;">
       <div style="width: 50%;">
         <div class="Fourth-Section-Title" style="line-height: 40px;">
           <h1 style="font-size: 75px;">WHO WILL</h1>
@@ -662,7 +677,7 @@ nav ul{
                 </div>
               </div>
             
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <svg id="circle1" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
                 <defs>
                   <linearGradient id="GradientColor">
                     <stop offset="0%" stop-color="#e91e63" />
@@ -681,7 +696,7 @@ nav ul{
                 </div>
               </div>
             
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <svg id="circle2" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
                 <defs>
                   <linearGradient id="GradientColor">
                     <stop offset="0%" stop-color="#e91e63" />
@@ -700,7 +715,7 @@ nav ul{
                 </div>
               </div>
             
-              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+              <svg id="circle3" xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
                 <defs>
                   <linearGradient id="GradientColor">
                     <stop offset="0%" stop-color="#e91e63" />
@@ -800,10 +815,11 @@ function startCountdownIfVisible(valueDisplay) {
   if (rect.top <= windowHeight && rect.bottom >= 0 && !animatedElements.includes(valueDisplay)) {
     let startValue = 0;
     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
-    let duration = Math.floor(1000 / endValue);
+    // let duration = Math.floor(1000 / endValue);
+    let duration = 20;
     let counter = setInterval(function () {
       startValue += 1;
-      valueDisplay.textContent = startValue;
+      valueDisplay.textContent = startValue + "+";
       if (startValue == endValue) {
         clearInterval(counter);
         animatedElements.push(valueDisplay);
@@ -836,41 +852,73 @@ document.addEventListener('scroll', function () {
   });
 // Ending
 
+// Section Function
+document.getElementById('home-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        navigateToSection('home');
+      });
 
-// Percentage Loading
-// document.addEventListener("DOMContentLoaded", function () {
-//   const numbers = document.querySelectorAll("#number");
+      document.getElementById('themes-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        navigateToSection('themes');
+      });
 
-//   function updateCounter(counter, target, interval) {
-//     let currentCounter = 0;
-//     const updateInterval = setInterval(() => {
-//       if (currentCounter >= target) {
-//         clearInterval(updateInterval);
-//       } else {
-//         currentCounter += 1;
-//         counter.innerHTML = currentCounter + "%";
-//       }
-//     }, interval);
-//   }
+      document.getElementById('partner-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        navigateToSection('thirdSection');
+      });
 
-//   function startCountdown() {
-//     numbers.forEach((number, index) => {
-//       const targetPercentage = [42, 38, 20][index];
-//       updateCounter(number, targetPercentage, 20);
-//     });
-//   }
+      document.getElementById('visit-link').addEventListener('click', function (event) {
+        event.preventDefault();
+        navigateToSection('visit');
+      });
 
-//   // Initial countdown when the page is loaded
-//   startCountdown();
+      // document.getElementById('contact-link').addEventListener('click', function (event) {
+      //   event.preventDefault();
+      //   navigateToSection('contact');
+      // });
 
-//   // Countdown on scroll (only once)
-//   let scrollCount = 0;
-//   function handleScroll() {
-//     if (scrollCount === 0) {
-//       startCountdown();
-//       scrollCount += 1;
-//     }
-//   }
+      function navigateToSection(sectionId) {
+        // You can add code to load and display content for the respective section here
+        // For simplicity, we'll just log the section ID for now
+        console.log('Navigating to section:', sectionId);
+
+        // Get the section element by its id
+        const section = document.getElementById(sectionId);
+
+        // Scroll to the section smoothly
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+
+
+// Ending
+
+// Percentage Loading Scrolling Animation
+const animationDuration = 5000; // 5000 milliseconds (adjust as needed)
+
+    // Get all SVG elements
+    const circles = document.querySelectorAll('.cardContainer svg');
+
+    // Pause the animation after the specified duration
+    setTimeout(() => {
+      circles.forEach(circle => {
+        pauseAnimation(circle);
+      });
+    }, animationDuration);
+
+    // Function to pause the SVG animation
+    function pauseAnimation(circle) {
+      circle.style.animationPlayState = 'paused';
+    }
+
+    // Detect scroll event
+    window.addEventListener('scroll', () => {
+      // Resume the animation on scroll
+      circles.forEach(circle => {
+        circle.style.animationPlayState = 'running';
+      });
+    });
+// Ending
 
 //   // Event listener for scroll
 //   window.addEventListener("scroll", handleScroll);
