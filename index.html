@@ -6,6 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -18,6 +23,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Alumni Sans', sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -54,8 +60,9 @@ nav ul{
     right: 0;
     margin:20px;
     padding-right: 20px;
-    gap: 50px;
+    gap: 55px;
     color: white;
+    font-size: 22px;
 }
 .left-side{
     padding-left: 50px;
@@ -75,18 +82,17 @@ nav ul{
 }
 .left-side .logo-text .logotext{
   position: absolute;
-  left: 140px;
+  left: 210px;
 }
 .left-side .HomeDate{
     padding-left: 50px;
 }
 .left-side .HomeDate h1{
-    font-size: 26px;
+    /* font-size: 42px; */
     font-weight: 600;
 }
 .left-side .HomeDate h1 span{
     display: block;
-    
 }
 .left-side .discovering{
     padding-left: 50px;
@@ -94,7 +100,7 @@ nav ul{
 }
 .left-side .discovering h4{
     font-size: 18px;
-    width: 400px;
+    width: 550px;
 }
 .left-side .discovering h4 .firstspan{
     font-size: 32px;
@@ -115,7 +121,7 @@ nav ul{
 .right-side{
     position: absolute;
     right:0;
-    bottom: 400px;
+    bottom: 290px;
 }
 .animated-number {
       font-size: 2em;
@@ -131,7 +137,7 @@ nav ul{
     color: white;
 }
 .right-side .home-divTime{
-    background-color: darkgreen;
+    background-color: rgba(69, 255, 69, 0.226);
     margin-top: 10px;
     align-items: center;
     justify-content: center;
@@ -141,12 +147,15 @@ nav ul{
     padding-top: 5px;
     padding-bottom: 5px;
     border-radius: 10px;
+    width: 100px;
+    height: 70px;
 }
 .right-side .home-divTime h1{
-    font-size: 23px;
+    font-size: 30px;
+    font-weight: 800;
 }
 .right-side .home-divTime p{
-    font-size: 9px;
+    font-size: 12px;
 }
 .second-section{
   background-color: rgba(255, 255, 0, 0.532);
@@ -218,8 +227,8 @@ nav ul{
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 350px;
-  height: 250px;
+  width: 480px;
+  height: 280px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .fourthSection{
@@ -306,14 +315,161 @@ nav ul{
   display: flex;
 }
 .cards{
-  height: 170px;
- width: 170px;
+  height: 270px;
+ width: 270px;
  border-radius: 0px;
  margin: 15px;
  background-color: rgb(0, 69, 3);
  padding: 20px;
  align-items: center;
  justify-content: center;
+}
+
+.Fourth-Section{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding-left: 50px;
+}
+.Fourth-Section .Fourth-Section-Title{
+  padding-top: 5%;
+  padding-bottom: 15px;
+}
+.Fourth-Section .cardContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 50%; */
+  gap: 20px;
+}
+.Fourth-Section .cardContainer .Percentage-Card{
+  width:240px ;
+  height: 250px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 69, 3);
+  border-radius: 10px;
+  gap: 15px;
+  position: relative;
+}
+.Fourth-Section .cardContainer .Percentage-Card h3{
+  font-size: 11px;
+}
+.cardContainer .innerCicle{
+  display: flex;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: 3px solid rgb(34, 90, 4);
+  align-items: center;
+  justify-content: center;
+}
+.cardContainer .innerCicle #number{
+  font-weight: 800;
+}
+.cardContainer .circle-1{
+  fill: none;
+  stroke: rgb(30, 147, 22);
+  stroke-width: 20px;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: anim 2s linear forwards;
+  transition: all 2s ease-in-out;
+}
+.cardContainer .circle-2{
+  fill: none;
+  stroke: rgb(30, 147, 22);
+  stroke-width: 20px;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: anim2 2s linear forwards;
+  transition: all 2s ease-in-out;
+}
+.cardContainer .circle-3{
+  fill: none;
+  stroke: rgb(30, 147, 22);
+  stroke-width: 20px;
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+  animation: anim3 2s linear forwards;
+  transition: all 2s ease-in-out;
+}
+.cardContainer svg{
+  position: absolute;
+  top: 60px;
+  left: 34px;
+}
+@keyframes anim{
+  100%{
+    stroke-dashoffset: 255;
+  }
+}
+@keyframes anim2{
+  100%{
+    stroke-dashoffset: 299;
+  }
+  /* 299 -38
+    352 - 20
+  */
+}
+@keyframes anim3{
+  100%{
+    stroke-dashoffset: 352;
+  }
+  /* 299 -38
+    352 - 20
+  */
+}
+
+.Fourth-Section .Icons_List{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: darkgreen;
+  padding-bottom: 20px;
+}
+.Fourth-Section .Icons_List ul{
+  list-style: none;
+  display:flex ;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.Fourth-Section .Icons_List ul li{
+  border: .1px solid grey;
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+}
+.Fourth-Section .Icons_List ul li span{
+  font-size: 80px;
+}
+.Fourth-Section .Fourth-Section-right-side{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 90px;
+}
+.Fourth-Section .Fourth-Section-right-side .right-side-border{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 680px;
+  width: 85%;
+  border: 1px solid orange;
+}
+.right-side-border .right-side-border-inner{
+  width: 90%;
+  height: 90%;
+}
+.right-side-border .right-side-border-inner img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 
@@ -329,30 +485,31 @@ nav ul{
           <li>VISIT SAUDI</li>
         </ul>
       </nav>
-      <div class=" left-side" style="z-index: 1; padding-top: 10%;">
+      <div class=" left-side" style="z-index: 1; padding-top: 40px;">
         <!-- logo&text -->
         <div class="logo-text">
           <!-- logo -->
           <div class=" logo">
-            <i class="fa-solid fa-business-time" style="font-size: 62px; padding-left: 50px;"></i>
+            <i class="fa-solid fa-business-time" style="font-size: 122px; padding-left: 50px;"></i>
           </div>
           <!-- text -->
           <div class="logotext">
-            <h2 style="width: 100px; font-size: 20px;line-height: 16px;">Lorem ipsum dolor sit</h2>
+            <h2 style="width: 200px; font-size: 40px;line-height: 28px;text-transform: capitalize;">KINGDOM INFRASTRUCTURE SUMMI & EXPO</h2>
           </div>
         </div>
           <!-- date -->
-          <div class="HomeDate" style="padding-top: 20px;">
-            <h1>10-11 JUNE</h1>
-            <span>RIYADH, SAUDI ARABIA</span>
+          <div class="HomeDate" style="padding-top: 20px;position: relative;">
+            <h1 style="font-size: 65px;">10-11 JUNE</h1>
+            <span style="font-size: 28px;position: absolute;top: 75px;
+            ">RIYADH, SAUDI ARABIA</span>
           </div>
         <!-- discovering -->
-        <div class="discovering">
-          <h4>DISCOVERING THE FUTURE <span class="firstspan" style="color: green;">INFRASTRUCTURE OF</span> <span>SAUDI ARABIA WITH VISION 2030</span></h4>
+        <div class="discovering" style="position: relative;">
+          <h4 style="font-size: 34px;">DISCOVERING THE FUTURE <span class="firstspan" style="color: green; font-size: 60px;position: absolute;top: 40px;">INFRASTRUCTURE OF</span> <span style="position: absolute;top: 90px;left: 50px;">SAUDI ARABIA WITH VISION 2030</span></h4>
         </div>
-       <div class="homeButton ">
-        <button>REGISTER NOW!</button>
-        <button>SPONSOR NOW!</button>
+       <div class="homeButton" style="padding-top: 90px;display: flex; gap: 30px;">
+        <button style="font-size: 26px;">REGISTER NOW!</button>
+        <button style="font-size: 26px;">SPONSOR NOW!</button>
        </div>
       </div>
       <!-- right side -->
@@ -382,14 +539,14 @@ nav ul{
       <div class="Overview">
         <div class="left-overview" style="position: relative;">
           <img src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329540/ae-research-hero-the-ksa-real-estate-market-mid-year-review-2019-masked_m0ka6i.jpg" style="mix-blend-mode: darken;" alt="">
-          <img src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329147/8918182_cfpbqi.png" style="width: 200px; height: auto; position: absolute; right: 100px;mix-blend-mode: screen; top: 400px;" alt="">
-          <img src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329147/8918182_cfpbqi.png" style="width: 200px; height: auto; position: absolute; left: 100px; top: 50px;mix-blend-mode: screen;" alt="">
-          <img src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329147/8918182_cfpbqi.png" style="width: 200px; height: auto; position: absolute; right: 100px; top: 50px;mix-blend-mode: screen;" alt="">
+          <img class="cloud1" src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329147/8918182_cfpbqi.png" style="width: 200px; height: auto; position: absolute; right: 100px;mix-blend-mode: screen; top: 400px;" alt="">
+          <img class="cloud2" src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329147/8918182_cfpbqi.png" style="width: 200px; height: auto; position: absolute; left: 100px; top: 50px;mix-blend-mode: screen;" alt="">
+          <img class="cloud3" src="https://res.cloudinary.com/dqydgc2ky/image/upload/v1705329147/8918182_cfpbqi.png" style="width: 200px; height: auto; position: absolute; right: 100px; top: 50px;mix-blend-mode: screen;" alt="">
 
         </div>
-        <div class="right-overview" style="z-index: 5; padding-left: 10px;">
-          <h1>EVENT OVERVIEW</h1>
-          <p style="padding-right: 30px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, rem sint in, sed earum, beatae totam provident eveniet accusantium deserunt veniam perspiciatis ratione? Vero asperiores eius nesciunt nihil nostrum commodi.
+        <div class="right-overview" style="z-index: 5; padding-left: 30px;padding-right: 40px;">
+          <h1 style="font-size: 60px;">EVENT OVERVIEW</h1>
+          <p style="padding-right: 30px; font-size: medium;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. At, rem sint in, sed earum, beatae totam provident eveniet accusantium deserunt veniam perspiciatis ratione? Vero asperiores eius nesciunt nihil nostrum commodi.
           Sit, perspiciatis necessitatibus officiis quod, incidunt reprehenderit quas laudantium nulla asperiores ratione fuga saepe corporis! Autem blanditiis iure ab nostrum veritatis? Et, at ipsam a laudantium itaque nemo accusamus blanditiis?
           Quas obcaecati adipisci quibusdam et debitis laudantium, nisi voluptatem totam quis minus officia odio maiores aperiam nobis hic placeat non possimus enim corrupti provident quaerat accusantium! Nulla amet eligendi odio.
           saepe corporis! Autem blanditiis iure ab nostrum veritatis? Et, at ipsam a laudantium itaque nemo accusamus blanditiis?
@@ -448,31 +605,185 @@ nav ul{
 
     
     <section style="background-color: black;">
-      <div style="align-items: center; justify-content: center; text-align: center; padding-top: 20px;">
-        <h1 style="color: white; font-size: 35px;
+      <div style="align-items: center; justify-content: center; text-align: center; padding-top: 20px;line-height: 40px;">
+        <h1 style="color: white; font-size: 75px;
         font-weight: 700;">FEATURED</h1>
-        <p style="font-size: 15px; color: darkgreen;">TOPIC DISCUSSIONS</p>
+        <p style="font-size: 25px; color: darkgreen;">TOPIC DISCUSSIONS</p>
       </div>
       <div class="CardSlider" style="justify-content: center; align-items: center;">
         <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
-          <i class="fa-regular fa-calendar-days" style="font-size: 40px;color: white;"></i>
-          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+          <span class="material-symbols-outlined"style="font-size: 90px;color: white;">
+            location_city
+            </span>
+          <h4 style="color: green;font-size: 18px;text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
         </div>
         <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
-          <i class="fa-regular fa-calendar-days"  style="font-size: 40px;color: white;"></i>
-          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+          <span class="material-symbols-outlined"style="font-size: 90px;color: white;">
+            stadium
+            </span>
+          <h4 style="color: green;text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">STADIUM PROJECT<span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">2034</span></h4>
         </div>
         <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
-          <i class="fa-regular fa-calendar-days"  style="font-size: 40px;color: white;"></i>
-          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+          <span class="material-symbols-outlined"style="font-size: 90px;color: white;">
+            flights_and_hotels
+            </span>
+          <h4 style="color: green;text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">RIYADH AIRPORT<span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">EXPANSION PROJECT</span></h4>
         </div>
         <div class="cards" style="display: flex; flex-direction: column;gap: 20px;">
-          <i class="fa-regular fa-calendar-days"  style="font-size: 40px;color: white;"></i>
-          <h4 style="color: green;">FUTURE SMART <span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">CITIES OF KSA</span></h4>
+          <span class="material-symbols-outlined"style="font-size: 90px;color: white;">
+            train
+            </span>
+          <h4 style="color: green;text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">RIYADH METRO<span style="text-decoration: underline; text-underline-offset: 10px; text-decoration-color: orange;">EXPANSION PROJECT</span></h4>
         </div>
+        
+      </div>
+      <!-- right Side -->
+      <!-- <div class="circle-Container">
         <div>
-          <div></div>
-          <div></div>
+          <div class="outer">
+            <div class="inner"></div>
+          </div>
+        </div>
+      </div> -->
+    </section>
+
+    <section class="Fourth-Section" style="display: flex;align-items: center; justify-content: center;">
+      <div style="width: 50%;">
+        <div class="Fourth-Section-Title" style="line-height: 40px;">
+          <h1 style="font-size: 75px;">WHO WILL</h1>
+          <p style="color: darkgreen; font-size: 25px;">YOU MEET?</p>
+        </div>
+          <div class="cardContainer">
+            <div class="Percentage-Card">
+              <h3 style="font-size: 24px;">Decision Makers</h3>
+              <div class="innerCicle">
+                <div id="number" style="font-size: 55px;" data-val="42">
+                  
+                </div>
+              </div>
+            
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class="circle-1" cx="80" cy="80" r="71" stroke-linecap="round"/>
+              </svg> 
+            </div>
+
+            <div class="Percentage-Card">
+              <h3 style="font-size: 24px;">Influencers</h3>
+              <div class="innerCicle">
+                <div id="number" style="font-size: 55px;" data-val="38">
+                  
+                </div>
+              </div>
+            
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class="circle-2" cx="80" cy="80" r="71" stroke-linecap="round"/>
+              </svg> 
+            </div>
+
+            <div class="Percentage-Card">
+              <h3 style="font-size: 24px;">Global Innovators</h3>
+              <div class="innerCicle">
+                <div id="number" style="font-size: 55px;" data-val="20">
+                  
+                </div>
+              </div>
+            
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle class="circle-2" cx="80" cy="80" r="71"  stroke-linecap="round"/>
+              </svg> 
+            </div>
+          </div>
+        
+          <!-- Icons Section -->
+          <div class="Icons_List">
+            <ul>
+              <li><span class="material-symbols-outlined">
+                person
+                </span>
+                <h6>Chairman</h6>
+              </li>
+              <li><span class="material-symbols-outlined">
+                person_add
+                </span><h6>Deputy Chairman</h6></li>
+              <li><span class="material-symbols-outlined">
+                social_leaderboard
+                </span><h6>CEO</h6></li>
+              <li><span class="material-symbols-outlined">
+                groups
+                </span><h6>COO</h6></li>
+              <li><span class="material-symbols-outlined">
+                person_apron
+                </span><h6>CIO</h6></li>
+              <li><span class="material-symbols-outlined">
+                manage_accounts
+                </span><h6>CTO</h6></li>
+              <li><span class="material-symbols-outlined">
+                manage_accounts
+                </span><h6>CDO</h6></li>
+              <li><span class="material-symbols-outlined">
+                diversity_1
+                </span><h6>Chief Investment Officer</h6></li>
+              <li><span class="material-symbols-outlined">
+                background_replace
+                </span><h6>Head Of Infrastructure</h6></li>
+              <li><span class="material-symbols-outlined">
+                account_circle
+                </span><h6>General Manager</h6></li>
+              <li><span class="material-symbols-outlined">
+                person
+                </span><h6>Managing Director</h6></li>
+              <li><span class="material-symbols-outlined">
+                person
+              </span><h6>Project Director</h6></li>
+              <li><span class="material-symbols-outlined">
+                person
+                </span><h6>Project Manager</h6></li>
+              <li><span class="material-symbols-outlined">
+                  person
+                </span><h6>Architect</h6></li>
+              <li><span class="material-symbols-outlined">
+                    person
+                </span><h6>Project Consultant</h6></li>
+              <li><span class="material-symbols-outlined">
+                      person
+                  </span><h6>Civil Engineer</h6></li>
+              <li><span class="material-symbols-outlined">
+                person
+                </span><h6>Project Engineer</h6></li>
+              <li><span class="material-symbols-outlined">
+                person
+              </span><h6>Investors</h6></li>
+            </ul>
+          </div>
+      </div>
+
+      <!-- right side -->
+
+      <div class="Fourth-Section-right-side">
+        <!-- Border -->
+        <div class="right-side-border">
+          <!-- Image -->
+          <div class="right-side-border-inner">
+            <img src="/MajoeFiles/images/zachary-kadolph-1utQVafuNaU-unsplash.jpg" alt="">
+          </div>
         </div>
       </div>
     </section>
@@ -513,6 +824,100 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// parallax
+
+document.addEventListener('scroll', function () {
+    const scrollPosition = window.scrollY;
+
+    // Adjust the position of cloud images based on scroll position
+    document.querySelector('.cloud1').style.top = 400 + scrollPosition * 0.2 + 'px';
+    document.querySelector('.cloud2').style.top = 50 - scrollPosition * 0.1 + 'px';
+    document.querySelector('.cloud3').style.top = 50 - scrollPosition * 0.1 + 'px';
+  });
+// Ending
+
+
+// Percentage Loading
+// document.addEventListener("DOMContentLoaded", function () {
+//   const numbers = document.querySelectorAll("#number");
+
+//   function updateCounter(counter, target, interval) {
+//     let currentCounter = 0;
+//     const updateInterval = setInterval(() => {
+//       if (currentCounter >= target) {
+//         clearInterval(updateInterval);
+//       } else {
+//         currentCounter += 1;
+//         counter.innerHTML = currentCounter + "%";
+//       }
+//     }, interval);
+//   }
+
+//   function startCountdown() {
+//     numbers.forEach((number, index) => {
+//       const targetPercentage = [42, 38, 20][index];
+//       updateCounter(number, targetPercentage, 20);
+//     });
+//   }
+
+//   // Initial countdown when the page is loaded
+//   startCountdown();
+
+//   // Countdown on scroll (only once)
+//   let scrollCount = 0;
+//   function handleScroll() {
+//     if (scrollCount === 0) {
+//       startCountdown();
+//       scrollCount += 1;
+//     }
+//   }
+
+//   // Event listener for scroll
+//   window.addEventListener("scroll", handleScroll);
+// });
+document.addEventListener("DOMContentLoaded", function () {
+  const numbers = document.querySelectorAll("#number");
+
+  function updateCounter(counter, target, interval) {
+    let currentCounter = 0;
+    const updateInterval = setInterval(() => {
+      if (currentCounter >= target) {
+        clearInterval(updateInterval);
+      } else {
+        currentCounter += 1;
+        counter.innerHTML = currentCounter + "%";
+      }
+    }, interval);
+  }
+
+  function handleIntersection(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const targetPercentage = parseInt(entry.target.dataset.val, 10);
+        updateCounter(entry.target, targetPercentage, 20);
+        observer.unobserve(entry.target);
+      }
+    });
+  }
+
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.5, // Adjust as needed
+  };
+
+  const intersectionObserver = new IntersectionObserver(handleIntersection, observerOptions);
+
+  // Observe each number element
+  numbers.forEach((number) => {
+    intersectionObserver.observe(number);
+  });
+});
+
+
+
+
+// Ending
 
      var swiper = new Swiper('.swiper-container', {
   pagination: '.swiper-pagination',

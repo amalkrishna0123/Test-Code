@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/rotating-slider.min.css">
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .rotating-slider ul.slides li{
+            color: #fff;
+        }
+        .rotating-slider ul.slides li:nth-of-type(1){
+            background: rgb(20, 0, 122);
+        }
+        .rotating-slider ul.slides li:nth-of-type(2){
+            background: url(/MajoeFiles/images/jocke-wulcan-KLOW1bD616Y-unsplash.jpg);
+        }
+        .rotating-slider ul.slides li:nth-of-type(3){
+            background: rgb(122, 4, 0);
+        }
+        .rotating-slider ul.slides li:nth-of-type(4){
+            background: url(/MajoeFiles/images/keegan-houser--Q_t4SCN8c4-unsplash.jpg);
+        }
+        .rotating-slider ul.slides li:nth-of-type(5){
+            background: rgb(197, 184, 5);
+        }
+        .rotating-slider ul.slides li:nth-of-type(6){
+            background: url(/MajoeFiles/images/zac-durant-_6HzPU9Hyfg-unsplash.jpg);
+        }
+        .rotating-slider ul.slides li.inner{
+            box-sizing: border-box;
+            padding: 2em;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="rotating-slider">
+        <ul class="slides">
+            <li>
+                <div class="inner">
+                    <h2>Most Pubpolar Hacker</h2>
+                    <p>Cleaver Hacker</p>
+                </div>
+            </li>
+            <li>
+                <div class="inner"></div>
+            </li>
+            <li>
+                <div class="inner">
+                    <h2>Most Pubpolar Hacker</h2>
+                    <p>Cleaver Hacker</p>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <h2>Most Pubpolar Hacker</h2>
+                    <p>Cleaver Hacker</p>
+                </div>
+            </li>
+            <li>
+                <div class="inner">
+                    <h2>Most Pubpolar Hacker</h2>
+                    <p>Cleaver Hacker</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
+
+<script src="/jquery.js"></script>
+<script src="/jquery.rotating-slider.min.js"></script>
+<script>
+    $(function(){
+        $('.rotating-slider').rotatingSlider({
+            slideHeight : Math.min(360,window.innerHeight - 80),
+            slideWidth : Math.min(480,window.innerWidth - 80),
+        });
+    });
+</script>
